@@ -17,6 +17,11 @@ export default {
         yellowAccent: "var(--yellow)",
       },
     },
+    screens: {
+      smallPhone: "320px",
+      phone: "480px",
+      tablet: "768px",
+    },
   },
   plugins: [],
 } satisfies Config;
