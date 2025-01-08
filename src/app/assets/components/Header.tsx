@@ -9,7 +9,7 @@ export default function Header() {
         height={50}
         src={bigLogo.src}
         alt="Yonder Logo"
-        className="lg tablet:px-8 pointer-events-none h-12 w-auto px-5 lg:h-14"
+        className="lg lg:h-14 pointer-events-none h-12 w-auto px-5 tablet:px-8"
         loading="eager"
       />
       <div

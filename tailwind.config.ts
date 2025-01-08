@@ -18,9 +18,12 @@ export default {
       },
     },
     screens: {
-      smallPhone: "320px",
+      base: "100px",
+      smallPhone: "360px",
       phone: "480px",
       tablet: "768px",
+      laptop: "1024px",
+      desktop: "1280px",
     },
   },
   plugins: [],

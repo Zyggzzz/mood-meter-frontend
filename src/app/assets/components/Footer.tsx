@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 h-36 w-screen bg-whiteBg">
-      <div className="tablet:grid-cols-8 grid h-full w-screen grid-cols-6 grid-rows-4 overflow-y-hidden">
+    <footer className="bottom-0 h-36 w-screen bg-whiteBg tablet:fixed">
+      <div className="grid h-full w-screen grid-cols-6 grid-rows-4 overflow-y-hidden tablet:grid-cols-8">
         <div className="col-span-2 bg-greenAccent"></div>
         <div className="col-span-1 col-start-6 bg-redAccent"></div>
         <div className="col-span-3 col-start-3 bg-purpleAccent"></div>
