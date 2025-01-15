@@ -6,7 +6,7 @@ const token = process.env.API_KEY;
 
 export async function MoodCall(result: string) {
   const response = await axios.post(
-    "https://api.mood-meter.nl/api/mood",
+    "https://api.mood-meter.nl/api/mood/",
     { mood: result },
     {
       headers: {
@@ -14,8 +14,7 @@ export async function MoodCall(result: string) {
       },
     },
   );
-
-  console.log(response.data.message);
+  return response.data;
 }
 
 export async function MoodGet() {
@@ -24,8 +23,16 @@ export async function MoodGet() {
       Authorization: `Bearer ${token}`,
     },
   });
+  return response.data;
+}
 
-  console.log(response.data.message);
+export async function EnqueteGet() {
+  const response = await axios.get("https://api.mood-meter.nl/api/enquete", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return response.data;
 }
 
 export async function EnqueteCall(enqueteResult: enqueteResultType) {
@@ -38,6 +45,30 @@ export async function EnqueteCall(enqueteResult: enqueteResultType) {
       },
     },
   );
+  return response.data;
+}
 
-  console.log(response.data.message);
+export async function adminAuthenticate(username: string, password: string) {
+  const response = await axios.post(
+    "https://api.mood-meter.nl/api/signin/",
+    {
+      username: username,
+      password: password,
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  );
+  return response.data;
+}
+
+export async function getLogsData() {
+  const response = await axios.get("https://api.mood-meter.nl/api/logs", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return response.data;
 }

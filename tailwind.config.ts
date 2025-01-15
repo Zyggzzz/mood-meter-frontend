@@ -15,6 +15,7 @@ export default {
         blackPrimary: "var(--black)",
         whiteBg: "var(--white)",
         yellowAccent: "var(--yellow)",
+        borderColor: "var(--border)",
       },
     },
     screens: {

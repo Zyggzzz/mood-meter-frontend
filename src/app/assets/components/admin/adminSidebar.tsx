@@ -14,7 +14,7 @@ export default function AdminSidebar(props: { active: string }) {
         </Link>
         <Link
           href={"/admin/graphs"}
-          className="group flex items-center gap-x-4 p-4 transition-colors ease-in-out hover:text-purpleAccent"
+          className={`group flex items-center gap-x-4 p-4 transition-colors ease-in-out hover:text-purpleAccent ${props.active === "graphs" ? "text-purpleAccent" : ""}`}
         >
           <ChartColumnIncreasing />
           Grafieken
