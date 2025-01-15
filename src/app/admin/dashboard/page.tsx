@@ -6,7 +6,7 @@ import { useState } from "react";
 import AdminLogs from "~/app/assets/components/admin/adminLogs";
 
 export default function adminLanding() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   if (loading) {
     return <AdminLogin setLoading={setLoading} />;
